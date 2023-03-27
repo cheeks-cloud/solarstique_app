@@ -1,6 +1,9 @@
 h1{
     text-align: center;
 }
+.heading{
+    padding-top: 30px;
+}
 .divider{
 
     width: 88px;
@@ -16,12 +19,12 @@ h1{
     border-radius: 2px  #ff9b02;
     
 }
-.btn{
+/* .btn{
    
     background-color: blue;
    
 
-}
+} */
 .btn-last{
     display: flex;
     justify-content: center;

@@ -11,20 +11,27 @@ h1{
 mat-grid-tile {
   background-color: #fff;
   color: #334240;
-  
   box-shadow: -5px -5px 40px 0 rgb(0 0 0 / 20%);
-  display: flex;
-  flex-direction: row;
 
-  flex-wrap: wrap; 
   }
  
-  mat-grid-list{
+mat-grid-list{
     width: 50vw;
-    height: 50vh;
-    position: relative;
+   
+   
   }
 
  
+  .form-control {
+    border: #50d284 2px solid;
+    background-color: #0f221f;
+  }
+ 
+  .elements{
+    padding: 20px;
+    display: flex;
+    
+  }
+ 
 
-
+ 
