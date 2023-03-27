@@ -1,0 +1,16 @@
+
+.heading{
+    background-color: #f2f5f4;
+    padding: 50px;
+    color: #212529;
+    text-align: center;
+  }
+
+.progress {
+    height: 50px;
+    display: block;
+    background: none;
+}
+.aboutus p{
+  text-align: center;
+}

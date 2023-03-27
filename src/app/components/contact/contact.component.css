@@ -1,0 +1,30 @@
+.heading{
+  background-color: #f2f5f4;
+  padding: 40px;
+  color: #4b605c
+}
+
+h1{
+    text-align: center;
+}
+
+mat-grid-tile {
+  background-color: #fff;
+  color: #334240;
+  
+  box-shadow: -5px -5px 40px 0 rgb(0 0 0 / 20%);
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap; 
+  }
+ 
+  mat-grid-list{
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+  }
+
+ 
+
+
