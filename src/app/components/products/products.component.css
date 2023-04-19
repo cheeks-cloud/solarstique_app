@@ -1,3 +1,6 @@
+.products{
+    background-color: #f2f5f4;
+}
 h1{
     text-align: center;
 }
@@ -8,24 +11,42 @@ h1{
 
     width: 88px;
     height: 2px;
-    margin-top: 6px;
-    margin-bottom: 16px;
+    margin: 6px auto 16px;
     border-radius: 1.5px;
-    background-color: #ff9b02;
-    margin-left: 380px;
+    background-color: rgb(190,37,176);
    
 }
-.mat-card{
-    border-radius: 2px  #ff9b02;
-    
+.btn{
+    background-color: rgb(190,37,176);
+    padding-left: 20px;
+    padding-right: 20px;
 }
-/* .btn{
-   
-    background-color: blue;
-   
 
-} */
 .btn-last{
+    margin: 20px;
     display: flex;
     justify-content: center;
+}
+
+  .row{
+    margin-top: 30px;
+    background-color: #f2f5f4;
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+  mat-card {
+    height: 100%;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+    margin-top: 16px;
+  }
+  
+
+@media screen and (max-width: 600px) {
+.divider{
+    margin-bottom: 8px;
+    width: 50px;
+  }
 }

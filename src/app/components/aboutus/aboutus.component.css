@@ -1,17 +1,121 @@
 
 .heading{
-    background-color: #f2f5f4;
-    padding: 50px;
-    color: #212529;
+    color: rgb(32, 216, 17);
     text-align: center;
+    font-weight: bolder;
+    background-color: #f2f5f4;
+    padding: 30px;
+    margin-top: 0;
+   
   }
-
-.progress {
-    height: 50px;
-    display: block;
-    background: none;
-}
-.aboutus p{
-  padding: 40px;
+h4,h3{
   text-align: center;
+  padding: 20px;
+  color: rgb(190,37,176);
+
+}
+.elements{
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+
+}
+.image2 p{
+  text-align: center;
+  padding: 20px;
+  color: rgb(190,37,176);
+}
+.aboutus {
+  width: 370px;
+  text-align: center;
+  padding: 20px;
+  
+}
+
+.about{
+  width: 370px;
+  text-align: center;
+  padding: 20px;
+}
+
+.bg-custom-purple {
+  background-color: rgb(190,37,176);
+}
+
+.card-title {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.btn-group .btn:hover {
+  background-color: white;
+  color: rgb(190,37,176);
+}
+.divider{
+    width: 88px;
+    height: 2px;
+    margin: 6px auto 16px;
+   
+    background-color: rgb(190,37,176);
+}
+
+.card {
+  height: 280px; 
+  width: 600px;
+  margin-left: 150px;
+  border-radius: 16px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-title {
+  font-weight: bolder;
+  order: 2; /* Change the order of the card title */
+}
+
+
+.btn{
+  margin-left: 20px;
+  padding: 10px;
+  
+}
+#youtube{
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+ 
+  .elements{
+   
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .image,img{
+    width: 370px;
+  }
+  .divider{
+    margin-bottom: 8px;
+    width: 50px;
+  }
+  .card{
+    width: 370px;
+    margin-left: 40px;
+    height: 350px;
+  }
+  .btn{
+    margin-top: 20px;
+  }
 }

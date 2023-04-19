@@ -1,4 +1,5 @@
 footer {
+  margin-top: 30px;
     background-color: rgb(61, 79, 76);
     color: #f1efef;
     height: 250px;
@@ -46,21 +47,9 @@ footer {
     margin-bottom: 12px;
   }
   .footer-column button{
-    background-color: rgb(27,188,163);
+    background-color: rgb(32, 216, 17);
     color: #e9dbdb;
-    /* padding: 10px; */
   }
-  
-  @media (max-width: 600px) {
-    .footer-container {
-      flex-direction: column;
-    }
-  
-    .footer-column {
-      margin: 12px 0;
-    }
-  }
-
   
   .last {
     background-color: #344341;
@@ -68,8 +57,8 @@ footer {
     height: 50px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    font-size: 14px;
   }
   
   .last-container {
@@ -81,11 +70,14 @@ footer {
   .last-container p {
     margin: 0 12px;
   }
-  
- 
+
   @media (max-width: 600px) {
     last {
       font-size: 12px;
+    }
+    .footer-container{
+      flex-direction: column;
+      flex-wrap: wrap;
     }
   }
   

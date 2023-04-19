@@ -6,7 +6,11 @@ import { FormsModule } from '@angular/forms';
 
 
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+
 import { MatButtonModule } from '@angular/material/button';
+import {MatButtonToggleModule} from '@angular/material/button-toggle'
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -20,6 +24,7 @@ import { InfoComponent } from './components/info/info.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -31,12 +36,17 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
     InfoComponent,
     ProductsComponent,
     ContactComponent,
-    AboutusComponent
+    AboutusComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatButtonToggleModule,
     MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+
     MatButtonModule,
     MatIconModule,
     MatCardModule,

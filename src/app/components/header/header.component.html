@@ -1,98 +1,60 @@
-<mat-toolbar color="success" class="position-fixed w-100">
-   
-  <img src="#" alt="logo">
+<!-- 
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side">
+  <mat-nav-list>
+    <img src="assets/images/logo.png"[height]="42" alt="Solarstique">
 
-<span class="spacer"> Solarstique</span>
-<a mat-button routerLink="/"routerLinkActive="active">HOME</a>
-<a mat-button routerLink="/about"routerLinkActive="active">ABOUT US</a>
-<a mat-button routerLink="/products"routerLinkActive="active">PRODUCTS</a>
-<a mat-button routerLink="/contact"routerLinkActive="active">CONTACT US</a>
+    <a mat-list-item routerLink="/" routerLinkActive="active" (click)="sidenav.toggle()">HOME</a>
+    <a mat-list-item routerLink="/about" routerLinkActive="active" (click)="sidenav.toggle()">ABOUT US</a>
+    <a mat-list-item routerLink="/products" routerLinkActive="active" (click)="sidenav.toggle()">PRODUCTS</a>
+    <a mat-list-item routerLink="/contact" routerLinkActive="active" (click)="sidenav.toggle()">CONTACT</a>
 
+    <div class="btn-group side" role="group" aria-label="Button group with two buttons">
+      <button type="button" class="btn btn-custom-purple">Buy Products</button>
+      <button type="button" class="btn btn-outline-custom-purple my-4">Carbon Credits</button>
+    </div>
+    <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+  </mat-nav-list>
+ </mat-sidenav>
 
-<div class="btn-row">
-  <button mat-raised-button color="primary"   >Carbon Credits </button>
-
-  <button mat-raised-button color="primary">Buy Products </button>
-
-</div>
-</mat-toolbar>
-
-
-
-
-
-
-
-
-<div id="myCarousel" class="carousel slide"data-bs-ride="carousel">
-  <!-- Carousel indicators -->
-  <ol class="carousel-indicators">
-      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
-      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-      <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
-      <li data-bs-target="#myCarousel" data-bs-slide-to="4"></li>
-  </ol>
-
-  <!-- Wrapper for carousel items -->
-  <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="assets/images/slide-2.jpg" class="d-block w-100"alt="Cars"> 
-          <div class="carousel-caption d-none d-md-block">
-            <h2>Cold Storage</h2>
-            <p>      In Sub-Saharan Africa, not only individual homes but also pharmacies, hotels, restaurants, bars, etc. lack access to cold storage.
-            </p>
-            <button mat-raised-button color="primary">Get Started </button>
-          </div>     
-      </div>
-      <div class="carousel-item ">
-        <img src="assets/images/slide-2.jpg" class="d-block w-100"alt="Cars"> 
-          <div class="carousel-caption d-none d-md-block">
-              <h2>Cold Storage</h2>
-              <p>      In Sub-Saharan Africa, not only individual homes but also pharmacies, hotels, restaurants, bars, etc. lack access to cold storage.
-              </p>
-              <button mat-raised-button color="primary">Get Started </button>
-          
-          </div>     
-      </div>
-      <div class="carousel-item">
-        <img src="assets/images/slide-2.jpg" class="d-block w-100"alt="Cars"> 
-          <div class="carousel-caption d-none d-md-block">
-            <h2>Cold Storage</h2>
-            <p>      In Sub-Saharan Africa, not only individual homes but also pharmacies, hotels, restaurants, bars, etc. lack access to cold storage.
-            </p>
-            <button mat-raised-button color="primary">Learn More </button>
-        
-         </div>     
-      </div>
-      <div class="carousel-item">
-        <img src="assets/images/slide-2.jpg" class="d-block w-100"alt="Cars"> 
-        <div class="carousel-caption d-none d-md-block">
-          <h2>Cold Storage</h2>
-          <p>      In Sub-Saharan Africa, not only individual homes but also pharmacies, hotels, restaurants, bars, etc. lack access to cold storage.
-          </p>
-          <button mat-raised-button color="primary">Get Started </button>
+  <mat-sidenav-content> 
+    <mat-toolbar-row>
       
-        </div>     
+      <span class="menu-spacer"></span>
+      <div class="navbar">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <img src="assets/images/logo.png"[height]="42" alt="Solarstique">
+        <a mat-button routerLink="/"routerLinkActive="active">HOME</a>
+        <a mat-button routerLink="/about"routerLinkActive="active">ABOUT</a>
+        <a mat-button routerLink="/products"routerLinkActive="active">PRODUCTS</a>
+        <a mat-button routerLink="/contact"routerLinkActive="active">CONTACT</a>
+        <div class="btn-group" role="group" aria-label="Button group with two buttons">
+          <button type="button" class="btn btn-custom-purple">Buy Products</button>
+          <button type="button" class="btn btn-outline-custom-purple ms-2">Carbon Credits</button>
+        </div>
       </div>
-    <div class="carousel-item">
-      <img src="assets/images/slide-2.jpg" class="d-block w-100"alt="Cars"> 
-      <div class="carousel-caption d-none d-md-block">
-        <h2>Cold Storage</h2>
-        <p>Bulding softwares</p>
-        <button mat-raised-button color="primary">Out Now </button>
-      </div>     
+    </mat-toolbar-row>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+
+<mat-toolbar-row >     
+  <span class="menu-spacer"></span>
+  <div class="navbar">
+    <img src="assets/images/logo.png"[height]="42" alt="Solarstique">
+    <a mat-button routerLink="/"routerLinkActive="active">HOME</a>
+    <a mat-button routerLink="/about"routerLinkActive="active">ABOUT</a>
+    <a mat-button routerLink="/products"routerLinkActive="active">PRODUCTS</a>
+    <a mat-button routerLink="/contact"routerLinkActive="active">CONTACT</a>
+    <div class="btn-group" role="group" aria-label="Button group with two buttons">
+      <a href="/buy-products" class="btn btn-custom-purple">Buy Products</a>
+      <a href="/carbon-credits" class="btn btn-outline-custom-purple ms-2">Carbon Credits</a>
     </div>
   </div>
-
-  <!-- Carousel controls -->
-  <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-  </a>
-</div>
+</mat-toolbar-row>
+<router-outlet></router-outlet>
 
 
 
@@ -105,19 +67,16 @@
 
 
 
-<!-- 
-   <mat-sidenav-container>
-    <mat-sidenav #sidenav mode="side" opened="true">
-      <!-- Navigation menu content goes here -->
-    <!-- </mat-sidenav>
-    <mat-sidenav-content> -->
-      <!-- Page content goes here -->
-    <!-- </mat-sidenav-content>
-  </mat-sidenav-container> -->
 
- <!-- <button mat-icon-button (click)="sidenav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button> -->
+
+
+
+
+
+
+
+
+
 
  
 

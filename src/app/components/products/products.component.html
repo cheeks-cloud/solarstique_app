@@ -1,3 +1,4 @@
+<div class="products">
 <div class="heading">
   <h1>
     OUR PRODUCTS
@@ -7,56 +8,30 @@
 <div class="divider"></div>
 
 
-<mat-grid-list cols="3" rowHeight="4:3" gutterSize="20px">
-    <mat-grid-tile>
-      <mat-card >
-        <img src="assets/images/freezer-1.jpg" alt="freezer"style="max-width: 100%;">
 
-        <mat-card-header>
-          <mat-card-title>Product1</mat-card-title>
-        </mat-card-header>
+
+
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col" *ngFor="let product of products">
+    <mat-card>
+      <img src="{{ product.imageUrl }}" class="card-img-top" alt="{{ product.name }}">
       <mat-card-content>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+        <p class="card-text">{{ product.price }}</p>
+        <div class="card-footer">
+          <button type="button" class="btn">Buy product</button>
+        </div>
       </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button class="btn">Learn More</button>
-      </mat-card-actions>
     </mat-card>
-  </mat-grid-tile>
+  </div>     
+</div>
 
-    <mat-grid-tile>
-    <mat-card >
-      <img src="assets/images/freezer-2.jpg" alt="freezer"style="max-width: 100%;">
-
-        <mat-card-header>
-          <mat-card-title>Product2</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button class="btn">Learn More</button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
-  
-    <mat-grid-tile>
-      <mat-card >
-        <img src="assets/images/freezer-3.jpg" alt="freezer"style="max-width: 100%;">
-        <mat-card-header>
-          <mat-card-title>Product3</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button class="btn">Learn More</button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
-</mat-grid-list>
 
 
 <div class="btn-last" >
   <button mat-raised-button color="primary">View More </button>
+</div>
 </div>
