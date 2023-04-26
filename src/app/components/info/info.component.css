@@ -1,14 +1,14 @@
-h1{
-    text-align: center;
-}
 
-.heading{
-    background-color: #f2f5f4;
-    padding: 70px;
-    color: #4b605c;
-    text-align: center;
+  
+  .image-row {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
-  .paragraph{
-    padding: 20px;
-
+  
+  .image-container {
+    margin: 20px;
   }
+  

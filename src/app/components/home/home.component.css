@@ -1,4 +1,9 @@
 
+ .home{
+  background-color: #f2f5f4;
+} 
+
+
 h1{
   color: rgb(32, 216, 17);
   font-weight: bolder;
@@ -24,9 +29,74 @@ h4{
 }
 .images{
   margin-top: 30px;
-  height:600px;
+  height:400px;
+}
+.row{
+  margin-top: 30px;
+  background-color: #f2f5f4;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+mat-card {
+  height: 100%;
+  border-radius: 12px;
+  text-align: center;
+}
+h3{
+  font-weight: bolder;
 }
 
+.btn-last{
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+
+}
+.last{
+  margin-top: 30px;
+  background-color: rgb(190,37,176);
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.btn{
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 2px solid  rgb(190,37,176);
+}
+
+.btn:hover{
+  background-color: rgb(190,37,176);
+  color: #f2f5f4;
+}
+
+.heading2 {
+  background-color: #d3d8d7;
+  margin-top: 80px;
+  text-align: center;
+  padding: 40px;
+}
+.heading2 h1{
+  color: black;
+  margin-bottom: 20px;
+}
+.divider{
+
+  width: 88px;
+  height: 2px;
+  margin: 6px auto 16px;
+  border-radius: 1.5px;
+  background-color: rgb(32, 216, 17);
+ 
+}
+.products {
+  text-align: center;
+  padding: 40px;
+  background-color: #d3d8d7;
+}
+.products h1{
+  color: black;
+}
 
 @media (max-width: 600px) {
   .information{

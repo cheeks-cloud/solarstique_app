@@ -1,7 +1,10 @@
+.contact{
+  background-color: #f2f5f4;
+
+}
 .heading2{
   background-color: #f2f5f4;
   padding: 40px;
-  color: rgb(32, 216, 17) ;
   text-align: center;
   font-weight: bolder;
 }
@@ -11,6 +14,9 @@ h3,h4{
 }
 h4{
   padding-bottom: 20px;
+}
+h3{
+  color:rgb(190,37,176) ;
 }
 
 .contact-card {
@@ -40,4 +46,22 @@ h4{
   
  } 
 
+ .divider{
+  width: 88px;
+  height: 2px;
+  margin: 6px auto 16px;
  
+  background-color: rgb(190,37,176);
+} 
+.btn{
+  margin-left: 120px;
+}
+
+@media screen and (max-width: 600px) {
+ 
+  .divider{
+    margin-bottom: 8px;
+    width: 50px;
+  }
+ 
+}

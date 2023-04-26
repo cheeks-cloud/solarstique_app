@@ -25,6 +25,8 @@ import { ProductsComponent } from './components/products/products.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { HomeComponent } from './components/home/home.component';
+import { CommonModule } from '@angular/common';
+import { CarbonComponent } from './components/carbon/carbon.component';
 
 
 
@@ -37,7 +39,8 @@ import { HomeComponent } from './components/home/home.component';
     ProductsComponent,
     ContactComponent,
     AboutusComponent,
-    HomeComponent
+    HomeComponent,
+    CarbonComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,7 @@ import { HomeComponent } from './components/home/home.component';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+    CommonModule,
 
     MatButtonModule,
     MatIconModule,
@@ -57,6 +61,7 @@ import { HomeComponent } from './components/home/home.component';
     BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }

@@ -1,23 +1,41 @@
+/* .aboutus{
+  background-color: #f2f5f4;
+} */
 
 .heading{
-    color: rgb(32, 216, 17);
+   
     text-align: center;
     font-weight: bolder;
-    background-color: #f2f5f4;
     padding: 30px;
     margin-top: 0;
-   
+       background-color:  #d3d8d7;
+
   }
-h4,h3{
+  .divider{
+    width: 88px;
+    height: 2px;
+    margin: 6px auto 16px;  
+    background-color: rgb(190,37,176);
+}
+
+ 
+h4,h2{
+
   text-align: center;
   padding: 20px;
   color: rgb(190,37,176);
 
+  
+}
+h2{
+  color: rgb(32, 216, 17);
 }
 .elements{
   display: flex;
   justify-content: space-around;
   padding: 30px;
+  background-color: #f2f5f4;
+
 
 }
 .image2 p{
@@ -36,10 +54,12 @@ h4,h3{
   width: 370px;
   text-align: center;
   padding: 20px;
+  
 }
 
 .bg-custom-purple {
   background-color: rgb(190,37,176);
+  margin-top: 50px;
 }
 
 .card-title {
@@ -51,18 +71,14 @@ h4,h3{
   background-color: white;
   color: rgb(190,37,176);
 }
-.divider{
-    width: 88px;
-    height: 2px;
-    margin: 6px auto 16px;
-   
-    background-color: rgb(190,37,176);
+.social{
+  background-color: #f2f5f4;
 }
 
 .card {
   height: 280px; 
   width: 600px;
-  margin-left: 150px;
+  margin-left: 420px;
   border-radius: 16px;
 }
 

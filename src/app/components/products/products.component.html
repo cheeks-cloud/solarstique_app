@@ -8,19 +8,18 @@
 <div class="divider"></div>
 
 
-
-
-
-
-
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col" *ngFor="let product of products">
     <mat-card>
-      <img src="{{ product.imageUrl }}" class="card-img-top" alt="{{ product.name }}">
+      <img src="{{ product.imageUrl }}" class="card-img-top"  height="200px"alt="{{ product.name }}">
       <mat-card-content>
-        <h5 class="card-title">{{ product.name }}</h5>
+        <h3 class="card-title">{{ product.name }}</h3>
+        <hr style="background-color:black">
+
         <p class="card-text">{{ product.description }}</p>
-        <p class="card-text">{{ product.price }}</p>
+        <hr style="background-color:black">
+
+        <p class="card-text"> {{ product.price }}</p>
         <div class="card-footer">
           <button type="button" class="btn">Buy product</button>
         </div>
@@ -29,9 +28,13 @@
   </div>     
 </div>
 
+<div class="last">
+  <p > Do not hesitate to contact us if you have any questions about our products
+    .Were here to help .
+  </p>
 
+</div>
 
-<div class="btn-last" >
-  <button mat-raised-button color="primary">View More </button>
+<app-footer> </app-footer>
 </div>
-</div>
+

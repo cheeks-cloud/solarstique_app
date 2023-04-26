@@ -1,22 +1,15 @@
-<div class="heading">
+<!-- <ng-image-slider [images]="images" #slider>
+  <ng-template ng-image-slider-tmp let-image="image" let-i="index">
+    <div class="slider-image-container">
+      <img [src]="image.image" [alt]="image.alt" (click)="slider.slideTo(i)" class="image" />
+    </div>
+  </ng-template>
+</ng-image-slider> -->
 
-    <H1>COLD STORAGE</H1>
-    <p class="paragraph">
-        In Sub-Saharan Africa, not only individual homes but also
-         pharmacies, hotels, restaurants, bars, etc. lack access 
-         to cold storage. This is due to an unstable power supply
-        that <br>makes cold storage applications very difficult and
-         expensive.On average Nigerians enjoy only 8 hours of electricity supply 
-         out of the 24 hours per day (BBC, 2020).<br> This situation has led to a large amount of food and beverage waste and makes
-          it difficult for pharmacies, hospitals, and clinics to maintain critical drugs and samples <br>
-         -resulting in loss of lives, food insecurity, poverty, and extreme hunger As a solution, We recycle old Freezers into solar Freezers with 
-         IoT and MIS for SMEs, households, and farmers.<br> Our solar freezers are made for an off-grid application, are 90% cheaper in operating costs, 
-         and provide refrigeration services 24/7. The IoT and MIS help to track food losses<br> reduction data from our freezers , these data are quantified
-          and traded in the carbon market using Block chain technology. Thereby enabling the users of freezers to earn <br>secondary income. 
-    </p>
 
+<div class="image-row">
+  <div class="image-container" *ngFor="let image of images">
+    <img [src]="image.img" height="100px" style="margin-right: 20px;">
+  </div>
 </div>
-
-
-
 

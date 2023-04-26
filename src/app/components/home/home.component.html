@@ -1,4 +1,6 @@
 
+  <div class="home">
+  
   <div class="information">
   <div class="heading">
     <h1> COLD STORAGE </h1>
@@ -20,45 +22,53 @@
   
   
   </div>
+  <div class="products">
+    <h1>Our Products</h1>
+    <div class="divider"></div>
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  </div>
+ 
 
-   
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let product of products">
+      <mat-card>
+        <img src="{{ product.imageUrl }}" class="card-img-top" height="200px" alt="{{ product.name }}">
+        <mat-card-content>
+          <h3 class="card-title">{{ product.name }}</h3>
+          <hr style="background-color:black">
+          <p class="card-text">{{ product.description }}</p>
+          <hr style="background-color:black">
+
+          <p class="card-text">{{ product.price }}</p>
+          <div class="card-footer">
+            <button type="button" class="btn">Learn More </button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>     
+  </div>
+  
+  <div class="btn-last" >
+    <a href="/products" class="btn  last btn-custom-purple">View More</a>
+
+  </div>
 
 
-<app-products></app-products>
+  <div class="heading2">
+    <h1> Meet Our Partners</h1>
+  
+    <h4> Those Who Trust  us Beyond Our Customers </h4>
+  
+    <div class="divider"></div>
 
+    
+  </div>
+   <app-info> </app-info>
 
+ 
+  
+  
 <app-footer></app-footer>
 
 
+  </div>
