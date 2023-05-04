@@ -73,7 +73,9 @@ p{
     margin-right: 90px;
 }
   
-  
+  .carbon{
+    /* background-image:url('assets/images/studio-dekorasyon-vngzm4P2BTs-unsplash.jpg'); */
+  }
   
   @media (max-width: 600px) {
 .information{

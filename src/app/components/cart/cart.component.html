@@ -1,0 +1,28 @@
+
+<h4> Products Selected    </h4>
+
+<div class="display" *ngFor="let item of cartItems">
+
+
+  <button (click)="increaseQuantity(item)"> Add Product </button>
+
+          <button (click)="decreaseQuantity(item)">-</button>
+
+          {{ item.quantity }}   
+
+  <h6> {{ item.product.description}}</h6>
+  <button> Buy Now</button>
+
+  {{ item. product.price * item.quantity }}
+
+  {{ getTotal() }}
+  <button (click)="checkout()">Checkout</button>
+</div>
+
+
+
+
+
+
+  <hr>
+<app-footer>  </app-footer>

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-
+import  { CartService } from'./cart.service';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -27,6 +27,7 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { HomeComponent } from './components/home/home.component';
 import { CommonModule } from '@angular/common';
 import { CarbonComponent } from './components/carbon/carbon.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 
@@ -41,6 +42,7 @@ import { CarbonComponent } from './components/carbon/carbon.component';
     AboutusComponent,
     HomeComponent,
     CarbonComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,7 @@ import { CarbonComponent } from './components/carbon/carbon.component';
     MatInputModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent],
 
 })

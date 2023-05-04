@@ -21,15 +21,18 @@
 
         <p class="card-text"> {{ product.price }}</p>
         <div class="card-footer">
-          <button type="button" class="btn">Buy product</button>
+          <button class="btn btn-custom-purple" (click)="addToCart(product)">Buy Products</button>
+
         </div>
       </mat-card-content>
     </mat-card>
   </div>     
 </div>
 
+
+
 <div class="last">
-  <p > Do not hesitate to contact us if you have any questions about our products
+  <p > Do not hesitate to <a href="/contact">Contact </a> us if you have any questions about our products
     .Were here to help .
   </p>
 
