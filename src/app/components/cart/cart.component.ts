@@ -1,6 +1,6 @@
-import { Component,OnInit } from '@angular/core';
-import { CartService,CartItem} from 'src/app/cart.service'
-
+import { Component,OnInit,Input } from '@angular/core';
+import { CartService,CartItem, Item} from 'src/app/services/cart.service'
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -12,13 +12,20 @@ import { CartService,CartItem} from 'src/app/cart.service'
 
 export class CartComponent implements OnInit {
 
+  productId:number=0;
 
-  cartItems: CartItem[] = [];
+  cartItems: any[] = [];
 
-  constructor(public cartService: CartService) { }
+  constructor( private route:ActivatedRoute , private cartService: CartService) { }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this. productId= params['id'];
+    });
+
     this.cartItems = this.cartService.getCartItems();
+    console.log(this.cartItems)
+
   }
 
   decreaseQuantity(item: CartItem) {

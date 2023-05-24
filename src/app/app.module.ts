@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
-import  { CartService } from'./cart.service';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import  { CartService } from'./services/cart.service';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -28,6 +29,12 @@ import { HomeComponent } from './components/home/home.component';
 import { CommonModule } from '@angular/common';
 import { CarbonComponent } from './components/carbon/carbon.component';
 import { CartComponent } from './components/cart/cart.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthServiceService } from './services/auth-service';
+import { ProductsService } from './services/products.service';
+import { MarketComponent } from './components/market/market.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -43,6 +50,9 @@ import { CartComponent } from './components/cart/cart.component';
     HomeComponent,
     CarbonComponent,
     CartComponent,
+    LoginComponent,
+    MarketComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,17 +62,20 @@ import { CartComponent } from './components/cart/cart.component';
     MatSidenavModule,
     MatListModule,
     CommonModule,
-
+    HttpClientModule,
     MatButtonModule,
     MatIconModule,
     MatCardModule,
     MatGridListModule,
     MatFormFieldModule,
     FormsModule,
+    ReactiveFormsModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSnackBarModule,
   ],
-  providers: [CartService],
+  providers: [CartService,AuthServiceService,ProductsService],
+  exports:[],
   bootstrap: [AppComponent],
 
 })

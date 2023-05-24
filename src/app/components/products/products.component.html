@@ -11,7 +11,7 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col" *ngFor="let product of products">
     <mat-card>
-      <img src="{{ product.imageUrl }}" class="card-img-top"  height="200px"alt="{{ product.name }}">
+      <img src="{{ product.image_url }}" class="card-img-top"  height="200px"alt="{{ product.name }}">
       <mat-card-content>
         <h3 class="card-title">{{ product.name }}</h3>
         <hr style="background-color:black">
@@ -21,7 +21,8 @@
 
         <p class="card-text"> {{ product.price }}</p>
         <div class="card-footer">
-          <button class="btn btn-custom-purple" (click)="addToCart(product)">Buy Products</button>
+    
+          <a [routerLink]="['/buy']" class="btn btn-custom-purple "(click)="addToCart(product)">Buy Products</a>
 
         </div>
       </mat-card-content>
