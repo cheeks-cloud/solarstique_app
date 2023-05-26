@@ -4,11 +4,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface Item {
-  productId: number;
+  id: number;
   name: string;
   description: String;
   price: number;
-  imageUrl: string;
+  image_url: string;
 
 }
 
@@ -33,7 +33,7 @@ export class CartService {
   )
 
   requestOptions = { headers: this.headers };
-  items: CartItem[] = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+  items: CartItem[] = localStorage.getItem('cartItems') === null ? [] : JSON.parse(localStorage.getItem('cartItems'));
   cartItemCount = new BehaviorSubject(0);
 
   constructor(private http: HttpClient) { }
@@ -41,9 +41,11 @@ export class CartService {
 
   addToCart(item: Item) {
     let added = false
+    console.log("this.items")
+    console.log(this.items)
     let itemss = this.items;
     for (let p of itemss) {
-      if (p.product.productId === item.productId) {
+      if (p.product.id === item.id) {
         p.quantity += 1;
         added = true;
         break;
@@ -81,13 +83,13 @@ export class CartService {
   clearCart() {
     this.items = [];
     this.cartItemCount.next(0);
-    localStorage.setItem('cartItems', null);
+    localStorage.removeItem('cartItems');
   }
 
   removeCartItem(item: any) {
     let itemss = this.items
     for (let i = 0; i < itemss.length; i++) {
-      if (itemss[i].product.productId === item.id) {
+      if (itemss[i].product.id === item.id) {
         itemss.splice(i, 1);
         break;
       }
@@ -115,17 +117,39 @@ export class CartService {
     return total;
   }
 
-  checkout(): Observable<any> {
-    alert('Thank you for your purchase!');
+  async checkout(): Promise<any> {
 
     let data = [];
     let items = this.items;
     for (var i = 0; i < items.length; i++) {
-      data.push({ productId: items[i].product.productId, quantity: items[i].quantity })
+      data.push(
+        {
+          "productId": items[i].product.id,
+          "quantity": items[i].quantity
+        }
+        )
     }
-    return this.http.post(`${this.url}/purchase/create`, {products:data})
 
+    let data1 = { products: data }
 
+    console.log("data")
+    console.log(data1)
+    const headers = new HttpHeaders().set('Authorization', 'Bearer ' +  JSON.parse(localStorage.getItem('token')));
+try {
+    const response = await this.http.post(`${this.url}/purchases/create`, data1, { headers}).toPromise();
+    
+        // Handle successful response
+        console.log('Purchase created successfully:', response);
+
+        alert('Thank you for your purchase! Our team will get back to you soon!');
+        localStorage.removeItem('cartItems');
+        return 'Purchase created successfully:' + response
+  } catch (error) {
+    // Handle error
+    console.error('Error creating purchase:', error);
+    return 'Error creating purchase:' + error;
+    // Perform error handling or display error messages
+  }
 
   }
 

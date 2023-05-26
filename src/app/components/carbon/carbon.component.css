@@ -47,8 +47,11 @@ h2 {
     padding-right: 40px;
     border: 2px solid  rgb(190,37,176);
   }
-  img{
+  .image{
     margin-left: 90px;
+  }
+  .image2{
+    margin-right: 90px;
   }
 .btn:hover{
     background-color: rgb(190,37,176);
@@ -136,11 +139,16 @@ p{
 
   
   @media (max-width: 600px) {
-.information{
+.information,.information2{
     flex-direction: column;
 }
-.img{
-    width: 400px;
+.image{
+    width: 150px;
+    margin:10px;
+}
+.image2{
+  width: 150px;
+  margin: 10px;
 }
 h2{
     font-size: 23;

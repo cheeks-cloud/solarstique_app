@@ -1,5 +1,93 @@
+.carbon{
+    background-color: #bfc9c6;
+}
 .btn{
     background-color: rgb(190,37,176);
     padding-left: 40px;
     padding-right: 40px;
+    margin-left: 120px;
+    color: black;
 }
+.cart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 40px;
+  }
+  .cart-item-details{
+    padding-left: 350px;
+  }
+  .cart-item-description{
+    text-align: center;
+    padding: 10px;
+
+  }
+  .cart-item-quantity{
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+    padding: 20px;
+
+    /* padding: 40px; */
+  }
+  /* #button{
+    background:  rgba(231, 233, 240, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 140px;
+    height: 50px;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Yeseva One', cursive;
+    margin-top: 3px;
+}
+#caption{
+    font-family: 'Yeseva One', cursive;
+    color: #f4b504;
+    font-weight: 300px;
+    font-size: 5.8rem;
+    padding-top: 23%;
+    letter-spacing: 5px;
+    /* line-height: 300px; */
+   
+    /* margin-top: 20px; */
+    /* padding-bottom: 30%; */
+
+/* #caption2{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Yeseva One', cursive;
+    color: #fff;
+    font-size: 43px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 3rem;
+} */
+
+/* #nav{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Yeseva One', cursive;
+}  */
+/* #denis{
+    background-image: url('/assets/andrae-ricketts-Q9_zv0LN4jU-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+} 
+.cart-card{
+    background-color: #f2f5f4;
+    padding: 40px;
+  */
+
+h3{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 58px;
+    text-align: center;
+}
+.top{
+    display: flex;
+
+}
+  

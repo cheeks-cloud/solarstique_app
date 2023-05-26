@@ -3,6 +3,23 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-/* .carbon .about .info .products{
-    background-color:  #f2f5f4;;
-} */
+.btn-outline-custom-purple:hover {
+    background-color: rgb(190,37,176);
+    color: black;
+  }
+  .btn-custom-purple:hover{
+    background-color: aliceblue;
+    color:rgb(190,37,176) ;
+  }
+ 
+  .btn-custom-purple {
+    background-color: rgb(190,37,176);
+    border-color: rgb(190,37,176);
+    color: white;
+  }
+  
+  .btn-outline-custom-purple {
+    border-color: rgb(190,37,176);
+    color: rgb(190,37,176);
+    background-color: aliceblue;
+  }

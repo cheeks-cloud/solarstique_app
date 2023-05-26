@@ -1,6 +1,7 @@
-import { Component,OnInit,Input } from '@angular/core';
-import { CartService,CartItem, Item} from 'src/app/services/cart.service'
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
+import { CartService, CartItem, Item } from 'src/app/services/cart.service'
+import { ActivatedRoute ,Router} from '@angular/router';
+
 
 
 @Component({
@@ -12,15 +13,15 @@ import { ActivatedRoute } from '@angular/router';
 
 export class CartComponent implements OnInit {
 
-  productId:number=0;
+  productId: number = 0;
 
   cartItems: any[] = [];
 
-  constructor( private route:ActivatedRoute , private cartService: CartService) { }
+  constructor(private route: ActivatedRoute, private cartService: CartService,private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this. productId= params['id'];
+      this.productId = params['id'];
     });
 
     this.cartItems = this.cartService.getCartItems();
@@ -30,32 +31,36 @@ export class CartComponent implements OnInit {
 
   decreaseQuantity(item: CartItem) {
     this.cartService.decreaseQuantity(item);
-    }
+  }
 
   increaseQuantity(item: CartItem) {
-      this.cartService.increaseQuantity(item);
-      }
+    this.cartService.increaseQuantity(item);
+  }
 
   removeItem(item: CartItem) {
-        this.cartService.removeCartItem(item. product);
-        this.cartItems = this.cartService.getCartItems();
-        }
+    this.cartService.removeCartItem(item.product);
+    this.cartItems = this.cartService.getCartItems();
+  }
 
   getTotal(): number {
-          let total = 0;
-          for (let item of this.cartItems) {
-          total += (item. product.price * item.quantity);
-          }
-          return total;
-          }
+    let total = 0;
+    for (let item of this.cartItems) {
+      total += (item.product.price * item.quantity);
+    }
+    return total;
+  }
 
   checkout() {
-            // Implement checkout logic here
-            this.cartService.clearCart();
-            this.cartItems = [];
-            alert('Checkout successful!');
-            }
-            
-            
+    this.cartService.checkout();
+    this.router.navigate(['/products']);
+
+    
+  }
+  logout(): void {
+    localStorage.removeItem('token')
+    this.router.navigate(['/products']);
+   }
+
+
 
 }
