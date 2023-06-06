@@ -1,5 +1,5 @@
 
-/* mat-sidenav-container{
+ /* mat-sidenav-container{
   height: 100%;
 }
 mat-sidenav,mat-sidenav-content{
@@ -17,7 +17,7 @@ top: 40;
   flex-direction: row;
   flex-wrap: wrap;
   
-} */
+}  */
 
   .sidenav {
     position: absolute;

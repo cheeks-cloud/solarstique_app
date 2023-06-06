@@ -1,3 +1,6 @@
+
+
+
 <!-- 
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side">
@@ -27,7 +30,7 @@
         </button>
         <img src="assets/images/logo.png"[height]="42" alt="Solarstique">
         <a mat-button routerLink="/"routerLinkActive="active">HOME</a>
-        <a mat-button routerLink="/about"routerLinkActive="active">ABOUT</a>
+        <a mat-button routerLink="/about"routerLinkActive="active"class="fa fa-info-circle">ABOUT</a>
         <a mat-button routerLink="/products"routerLinkActive="active">PRODUCTS</a>
         <a mat-button routerLink="/contact"routerLinkActive="active">CONTACT</a>
         <div class="btn-group" role="group" aria-label="Button group with two buttons">
@@ -39,28 +42,33 @@
   </mat-sidenav-content>
 </mat-sidenav-container> -->
 
-
 <mat-toolbar-row >     
   <span class="menu-spacer"></span>
   <div class="navbar">
     <img src="assets/images/logo.png"[height]="42" alt="Solarstique">
-    <a mat-button routerLink="/"routerLinkActive="active">HOME</a>
-    <a mat-button routerLink="/about"routerLinkActive="active">ABOUT</a>
-    <a mat-button routerLink="/products"routerLinkActive="active">PRODUCTS</a>
-    <a mat-button routerLink="/contact"routerLinkActive="active">CONTACT</a> 
+    <a mat-button routerLink="/"routerLinkActive="active" class="bi bi-house-door">HOME</a>
+    <a mat-button routerLink="/about"routerLinkActive="active"class="bi bi-info-circle">ABOUT</a>
+    <a mat-button routerLink="/products"routerLinkActive="active"class="bi bi-tools">PRODUCTS</a>
+    <a mat-button routerLink="/contact"routerLinkActive="active"class="bi bi-envelope">CONTACT</a> 
    
-   
-    <!-- <a mat-button routerLink="/auth" routerLinkActive="active">Login</a> -->
+  
+    <a *ngIf="!authenticated" mat-button routerLink="/auth" routerLinkActive="active">Login</a>
 
    
-    <div class="btn-group" role="group" aria-label="Button group with two buttons">
-      <a href="/buy" class="btn btn-custom-purple"><i class="bi bi-cart">My Cart</i> </a>
-      
+    <div  *ngIf="authenticated"  class="btn-group" role="group" aria-label="Button group with two buttons">
+      <a href="/buy" class="btn btn-custom-purple"><i class="bi bi-cart">My Cart</i> </a>  
       <a href="/carbon" class="btn btn-outline-custom-purple ms-2">Carbon Credits</a>
     </div>
-  </div>
-</mat-toolbar-row>
-
+ 
+    <div class="dropdown">
+        <button class="btn btn-outline-custom-purple dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ this.username }}
+        </button>
+        <ul class="dropdown-menu" *ngIf="authenticated">
+          <li><button class="dropdown-item" type="button" routerLink="/profile">Profile</button></li>
+          <li><button class="dropdown-item" type="button" (click)="logout()">Logout</button></li>
+        </ul>
+    </div>
 
 
 

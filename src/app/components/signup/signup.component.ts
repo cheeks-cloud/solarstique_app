@@ -14,11 +14,7 @@ import { MatSnackBar} from '@angular/material/snack-bar';
 export class SignupComponent implements OnInit {
   formGroup: FormGroup;
 
-  constructor(
-    public snackBar: MatSnackBar,
-    private authService: AuthServiceService,
-    private http: HttpClient,
-    private router: Router
+  constructor(public snackBar: MatSnackBar, private authService: AuthServiceService, private http: HttpClient,private router: Router
     ) {}
     openSnackBar(message: string, action: string) {
       this.snackBar.open(message, action, {

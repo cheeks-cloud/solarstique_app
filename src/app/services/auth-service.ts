@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders,HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -45,6 +45,16 @@ requestOptions = { headers: this.headers };
         return null;
     }
 }
+
+private authenticated$: BehaviorSubject<boolean> = new BehaviorSubject(false);
+
+  isAuthenticated(): Observable<boolean> {
+    return this.authenticated$.asObservable();
+  }
+
+  setAuthenticated(authenticated: boolean) {
+    this.authenticated$.next(authenticated);
+  }
 
 
 }

@@ -41,8 +41,6 @@ export class CartService {
 
   addToCart(item: Item) {
     let added = false
-    console.log("this.items")
-    console.log(this.items)
     let itemss = this.items;
     for (let p of itemss) {
       if (p.product.id === item.id) {
@@ -64,13 +62,16 @@ export class CartService {
 
 
   increaseQuantity(item: CartItem) {
-    item.quantity++;
+    let itemss = this.items;
+    let index = itemss.indexOf(item);
+    itemss[index].quantity+=1;
+    localStorage.setItem("cartItems", JSON.stringify(itemss));
   }
 
-  getCartItems(): string[] {
-    const items = localStorage.getItem("cartItems");
+  getCartItems(): CartItem[] {
+    const items = this.items;
     if (items !== null) {
-      return JSON.parse(items);
+      return this.items;
     } else {
       return [];
     }
@@ -88,12 +89,10 @@ export class CartService {
 
   removeCartItem(item: any) {
     let itemss = this.items
-    for (let i = 0; i < itemss.length; i++) {
-      if (itemss[i].product.id === item.id) {
-        itemss.splice(i, 1);
-        break;
-      }
-    }
+    
+    let index = itemss.indexOf(item)
+    itemss.splice(index,1)
+    
     let count = this.cartItemCount.value
     this.cartItemCount.next(count--);
     localStorage.setItem('cartItems', JSON.stringify(itemss));
@@ -101,7 +100,12 @@ export class CartService {
 
   decreaseQuantity(item: CartItem) {
     if (item.quantity > 1) {
-      item.quantity--;
+      
+    let itemss = this.items;
+    let index = itemss.indexOf(item);
+    itemss[index].quantity-=1;
+    localStorage.setItem("cartItems", JSON.stringify(itemss));
+
       let count = this.cartItemCount.value
       this.cartItemCount.next(count--);
     } else {
@@ -145,10 +149,7 @@ try {
         localStorage.removeItem('cartItems');
         return 'Purchase created successfully:' + response
   } catch (error) {
-    // Handle error
-    console.error('Error creating purchase:', error);
     return 'Error creating purchase:' + error;
-    // Perform error handling or display error messages
   }
 
   }

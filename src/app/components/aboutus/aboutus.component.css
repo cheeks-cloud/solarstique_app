@@ -8,7 +8,7 @@
     font-weight: bolder;
     padding: 30px;
     margin-top: 0;
-       background-color:  #d3d8d7;
+    background-color:  #d3d8d7;
 
   }
   .divider{
@@ -104,6 +104,35 @@ h2{
 #youtube{
   margin-top: 20px;
 }
+
+.carousel-item {
+  transition: transform 1s ease-in-out;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; */
+
+}
+
+.carousel-item.active {
+  transform: translateX(0);
+}
+
+.carousel-item.next {
+  transform: translateX(100%);
+}
+
+.carousel-item.prev {
+  transform: translateX(-100%);
+}
+
+/* Add custom styles to show all images initially */
+.carousel-item-initial {
+  transform: translateX(0) !important;
+  /* opacity: 1 !important; */
+
+}
+
 
 
 

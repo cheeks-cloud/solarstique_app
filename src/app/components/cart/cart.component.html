@@ -27,36 +27,43 @@
   <div class="cart-container">
     <div *ngIf="cartItems.length > 0; else emptyCart">
       <mat-card class="cart-card" *ngFor="let item of cartItems">
-        <img src="{{ item.product.image_url  }}" alt="{{ item.name }}" class="cart-item-image">
+        <img src="{{ item.product.image_url  }}" alt="{{ item.product.name }}" class="cart-item-image">
         <div class="cart-item-details">
           <h3 class="cart-item-name">{{ item.product.name }}</h3>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+
           <p class="cart-item-description">{{ item.product.description }}</p>
-          <p class="cart-item-price">{{ item.product.price | currency }}</p>
+          <p class="cart-item-price">Product price: {{ item.product.price | currency }}</p>
           <div class="cart-item-quantity">
             <button class="cart-item-button" (click)="decreaseQuantity(item)">-</button>
             <p class="cart-item-quantity-text">{{ item.quantity }}</p>
             <button class="cart-item-button" (click)="increaseQuantity(item)">+</button>
           </div>
-          <button class="cart-item-remove" (click)="removeItem(item)">Remove</button>
+          <button class="btn-outline-custom-purple " (click)="removeItem(item)">Remove</button>
         </div>
       </mat-card>
       <div class="cart-total">
         <p class="cart-total-text">Total: {{ getTotal() | currency }}</p>
-      
+      <hr>
         <button class="btn btn-outline-custom-purple ms-2" (click)="checkout()">Checkout</button>
       </div>
     </div>
     <ng-template #emptyCart>
-      <p>Your cart is empty</p>
-      <p> Go Back to select products</p>
+      <p>Your cart is empty.  </p>
+      <p>   Go Back to select products</p>
     </ng-template>
   </div>
+<hr>
 
 
 
-
-
-<a [routerLink]="['/products']" class="btn btn-custom-purple "> Go Back</a>
+<div class="last">
+  <p> Back to products</p>
+  <a [routerLink]="['/products']" class="btn btn-custom-purple "> Go Back</a>
+</div>
 
 
 <hr>

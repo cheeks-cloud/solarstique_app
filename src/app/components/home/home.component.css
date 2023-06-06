@@ -126,6 +126,21 @@ h3{
   color: black;
   margin-bottom: 20px;
 }
+.review{
+  text-align: center;
+  
+}
+.review i{
+  /* background-color: #f4b504; */
+  margin-right: 10px;
+}
+.first{
+  display: flex;
+}
+.info{
+  text-align: center;
+  margin-right: 30px;
+}
 .divider{
 
   width: 88px;

@@ -9,6 +9,12 @@ h1,h3{
 .heading{
     padding-top: 30px;
 }
+.btn-last{
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+
+}
 .divider{
 
     width: 88px;
