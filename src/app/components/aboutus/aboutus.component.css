@@ -107,11 +107,6 @@ h2{
 
 .carousel-item {
   transition: transform 1s ease-in-out;
-  /* display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center; */
-
 }
 
 .carousel-item.active {
@@ -125,13 +120,18 @@ h2{
 .carousel-item.prev {
   transform: translateX(-100%);
 }
+.carousel-item img {
+  transition: transform 0.3s;
+}
+
+.carousel-item:hover img {
+  transform: scale(1.1);
+}
 
 /* Add custom styles to show all images initially */
-.carousel-item-initial {
+/* .carousel-item-initial {
   transform: translateX(0) !important;
-  /* opacity: 1 !important; */
-
-}
+} */
 
 
 
