@@ -1,29 +1,4 @@
-
 <div class="carbon">
-  <div class="top">
-    <h4> Products Selected </h4>
-    <div class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">current</button>
-      <ul class="dropdown-menu">
-        <li><button class="dropdown-item" type="button"routerLink="/profile">Profile</button></li>
-        <li><button class="dropdown-item" type="button"(click)="logout()">Logout</button></li>
-        <li><button class="dropdown-item" type="button">Dropdown item</button></li>
-      </ul>
-    </div>
-    <button class="btn btn-primary " type="button" routerLink="/contact">Help</button>
-
-
-  </div>
-
-
-<!-- <div id="denis">
-  <h1 id="caption" class="text-center">MZAZI SPACE</h1>
-  <h4 id="caption2" class="text-center">The trusted Online Hub for</h4>
-  <h4 id="caption2" class="text-center">Single Parents.</h4>
-  <div style="text-align:center;"><button type="button" id="button"  class="btn btn-secondary" routerLink="/login">LOGIN</button></div>
-</div> -->
-
-
   <div class="cart-container">
     <div *ngIf="cartItems.length > 0; else emptyCart">
     
@@ -31,7 +6,7 @@
         <div class="image">
           <img src="{{ item.product.image_url  }}" alt="{{ item.product.name }}" class="cart-item-image" [width]="400">
         </div>
-        
+
         <div class="cart-item-details">
           <h3 class="cart-item-name">{{ item.product.name }}</h3>
           <i class="bi bi-star-fill"></i>
@@ -49,6 +24,13 @@
           <button class="btn-outline-custom-purple " (click)="removeItem(item)">Remove</button>
         </div>
       </mat-card>
+      
+      <div class="last">
+        <hr>
+        <button [routerLink]="['/products']" class="btn btn-custom-purple  ms-2"> Add more Products</button>
+        <hr>
+      </div>
+
       <div class="cart-total">
         <p class="cart-total-text">Total: {{ getTotal() | currency }}</p>
       <hr>
@@ -56,21 +38,31 @@
       </div>
     </div>
     <ng-template #emptyCart>
-      <p>Your cart is empty.  </p>
-      <p>   Go Back to select products</p>
+      <div class="emptyCart">
+        <div class="pa">
+          <p>Your cart is empty.<br> Go Back to select products <br>  </p>
+        </div>
+  
+        <div class="back">
+          <button [routerLink]="['/products']" class="btn btn-custom-purple  ms-2"> Back </button>
+        </div>
+
+      </div>
+   
+
     </ng-template>
   </div>
 <hr>
 
 
-
-<div class="last">
-  <p> Back to products</p>
-  <a [routerLink]="['/products']" class="btn btn-custom-purple "> Go Back</a>
+<div class="intro">
+  <h2> Need Help ?</h2>
+  <p>  Talk to Us </p>
+  <button class="btn btn-outline-custom-purple ms-2" type="button" routerLink="/contact">Help</button>
 </div>
 
 
-<hr>
+
 
 <app-footer> </app-footer>
 </div>
