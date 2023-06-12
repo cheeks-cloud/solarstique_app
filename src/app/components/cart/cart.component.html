@@ -26,8 +26,12 @@
 
   <div class="cart-container">
     <div *ngIf="cartItems.length > 0; else emptyCart">
-      <mat-card class="cart-card" *ngFor="let item of cartItems">
-        <img src="{{ item.product.image_url  }}" alt="{{ item.product.name }}" class="cart-item-image">
+    
+      <mat-card class="cart-card  card" *ngFor="let item of cartItems">
+        <div class="image">
+          <img src="{{ item.product.image_url  }}" alt="{{ item.product.name }}" class="cart-item-image" [width]="400">
+        </div>
+        
         <div class="cart-item-details">
           <h3 class="cart-item-name">{{ item.product.name }}</h3>
           <i class="bi bi-star-fill"></i>

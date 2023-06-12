@@ -46,18 +46,28 @@
   <span class="menu-spacer"></span>
   <div class="navbar">
     <img src="assets/images/logo.png"[height]="42" alt="Solarstique">
-    <a mat-button routerLink="/"routerLinkActive="active" class="bi bi-house-door">HOME</a>
-    <a mat-button routerLink="/about"routerLinkActive="active"class="bi bi-info-circle">ABOUT</a>
-    <a mat-button routerLink="/products"routerLinkActive="active"class="bi bi-tools">PRODUCTS</a>
-    <a mat-button routerLink="/contact"routerLinkActive="active"class="bi bi-envelope">CONTACT</a> 
-   
+    <a mat-button routerLink="/" routerLinkActive="active" class="home-icon">
+      <i class="bi bi-house-door-fill"></i> HOME
+    </a>
+    <a mat-button routerLink="/about" routerLinkActive="active" class="home-icon">
+      <i class="bi bi-info-circle-fill"></i> ABOUT
+    </a>    
+    <a mat-button routerLink="/products" routerLinkActive="active" class="home-icon">
+      <i class="bi bi-bag-fill"></i> PRODUCTS
+    </a>
+        <a mat-button routerLink="/contact" routerLinkActive="active" class="home-icon">
+      <i class="bi bi-envelope-fill"></i> CONTACT
+    </a>   
   
     <a *ngIf="!authenticated" mat-button routerLink="/auth" routerLinkActive="active">Login</a>
 
    
     <div  *ngIf="authenticated"  class="btn-group" role="group" aria-label="Button group with two buttons">
-      <a href="/buy" class="btn btn-custom-purple"><i class="bi bi-cart">My Cart</i> </a>  
-      <a href="/carbon" class="btn btn-outline-custom-purple ms-2">Carbon Credits</a>
+
+      <a  mat-button  routerLink="/buy"routerLinkActive="active" class="btn btn-custom-purple home-icon">
+        <i class="bi bi-cart-fill"></i>CART
+      </a>  
+      <a  routerLink="/carbon"routerLinkActive="active"class="btn btn-custom-purple">Carbon Credits</a>
     </div>
  
     <div class="dropdown">

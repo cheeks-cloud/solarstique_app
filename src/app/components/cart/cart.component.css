@@ -8,8 +8,13 @@
     margin-left: 120px;
     color: black;
 }
+.card{
+    display: flex;
+    flex-direction: column;
+
+}
 .cart-card{
-   
+ 
     box-shadow: 5px 5px 7px rgb(78, 85, 78);
     margin-bottom: 20px;
     background-color: #e8e6e8;
@@ -29,8 +34,6 @@
     padding-right: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    /* margin-left: 50px; */
-
 }
 .hr{
     padding: 10px;
@@ -49,7 +52,7 @@
 }
 
   .cart-item-details{
-    padding-left: 350px;
+    /* padding-left: 350px; */
     text-align: center;
   }
   .cart-item-price{
@@ -69,8 +72,9 @@
     padding: 10px;
     margin-right: 50px;
     margin-left: 50px;
-
-    /* padding: 40px; */
+  }
+  .bi{
+    color:#f4b504
   }
   /* #button{
     background:  rgba(231, 233, 240, 0.5);

@@ -19,13 +19,13 @@ top: 40;
   
 }  */
 
-  .sidenav {
+  /* .sidenav {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    width: 250px; /* adjust this width to your preference */
-  }
+    width: 250px; /* adjust this width to your preference 
+  } */
  
  
 
@@ -56,7 +56,11 @@ h4{
   margin-top: 30px;
   height:600px;
 }
-
+.bi {
+  color: rgb(251, 227, 12); 
+  font-size: 24px; 
+  margin-right: 10px; 
+}
 
 @media (max-width: 600px) {
   .information{

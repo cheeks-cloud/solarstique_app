@@ -98,7 +98,6 @@ position: relative;
 .input-field i {
 text-align: center;
 line-height: 55px;
-/* color: #acacac; */
 transition: 0.5s;
 font-size: 1.1rem;
 }
@@ -110,11 +109,9 @@ border: none;
 line-height: 1;
 font-weight: 600;
 font-size: 1.1rem;
-/* color: #333; */
 }
 
 .input-field input::placeholder {
-/* color: #aaa; */
 font-weight: 500;
 }
 
@@ -144,14 +141,14 @@ transition: 0.3s;
 }
 
 .social-icon:hover {
-color: #f4b504;
+color: rgb(32, 216, 17);
 border-color: #000;
 }
 
 .btn {
 width: 150px;
 font-family: 'Montserrat', sans-serif;
-background-color: #f4b504;
+background-color: rgb(32, 216, 17);
 border: none;
 outline: none;
 height: 49px;
@@ -165,7 +162,7 @@ transition: 0.5s;
 }
 
 .btn:hover {
-background-color: #f4b504;
+background-color: rgb(190,37,176);
 }
 .panels-container {
 position: absolute;
@@ -185,7 +182,7 @@ width: 2000px;
 top: -10%;
 right: 48%;
 transform: translateY(-50%);
-background-image: linear-gradient(-45deg, #f4b504 0%, #f4b504 100%);
+background-image: linear-gradient(-45deg, rgb(190,37,176) 0%, rgb(190,37,176) 100%);
 transition: 1.8s ease-in-out;
 border-radius: 50%;
 z-index: 6;
@@ -238,7 +235,7 @@ font-family: 'Montserrat', sans-serif;
 .btn.transparent {
 margin: 0;
 background: #f0f0f0;
-border: 2px solid #f4b504;
+border: 2px solid rgb(32, 216, 17);
 width: 130px;
 height: 41px;
 font-weight: 600;

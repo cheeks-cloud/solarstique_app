@@ -121,7 +121,6 @@ h3{
   
 }
 .review i{
-  /* background-color: #f4b504; */
   margin-right: 10px;
 }
 .first{
@@ -168,14 +167,14 @@ ul li {
   color:#000;
   background:rgb(225, 225, 217);
   display:block;
-  /* height:10em;
-  width:10em; */
   padding:30px;
   box-shadow: 5px 5px 7px rgb(32, 216, 17);
   margin:1em;
 
 }
-
+.bi{
+  color: rgb(251, 227, 12);
+}
 
 
 
