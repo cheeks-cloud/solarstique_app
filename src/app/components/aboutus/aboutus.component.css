@@ -27,6 +27,8 @@ h4,h2{
 }
 h2{
   color: rgb(32, 216, 17);
+  margin-top: 20px;
+  padding-top: 30px;
 }
 .elements{
   display: flex;
@@ -135,7 +137,7 @@ h2{
 
   .carousel-item{
       width: 600px;
-      margin-left: 145px;
+      margin-left: 155px;
   }
   .carousel-control-next-icon{
       margin-left: 5px;
@@ -143,6 +145,15 @@ h2{
   }
   .carousel-control-prev-icon{
       margin-right: 5px;
+  }
+  .card {
+    margin-left: 150px;
+    border-radius: 20px;
+  }
+  .image2 img{
+    margin-top: 40px;
+    height: 250px;
+    width: 350px;
   }
 
 }
@@ -155,9 +166,13 @@ h2{
     flex-direction: column;
   }
   
-  .image,img{
+  .image img{
     width: 420px;
     margin-left: 30px;
+  }
+  .image2 img{
+    width: 420px;
+    margin-right: 30px;
   }
   .aboutus,.about{
     text-align: center;

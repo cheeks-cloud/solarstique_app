@@ -62,7 +62,14 @@
     align-items: center;
   }
   
- 
+  @media (max-width: 905px) {
+    .footer-container {
+      width: 100%;
+      margin: 20px;
+    }
+
+
+  }
 
   @media (max-width: 600px) {
     .last {
@@ -74,20 +81,17 @@
       flex-direction: column;
       flex-wrap: wrap;
     }
-    .footer-container{
-      padding: 20px;
+   
+    .footer-container {
+      width: 100%;
+      margin: 10px;
     }
-    .one{
-      margin-left:10px;
+    .footer-column p {
+      font-size: 10px;
+      margin-bottom: 12px;
     }
   }
 
-  @media (max-width: 600px) {
 
-
-
-
-
-  }
 
   

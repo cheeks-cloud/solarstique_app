@@ -19,7 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
@@ -38,6 +38,8 @@ import { ProductsService } from './services/products.service';
 import { MarketComponent } from './components/market/market.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 
@@ -78,6 +80,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSnackBarModule,
     MatSelectModule,
     MatInputModule,
+    MatCheckboxModule ,
+    MatRadioModule ,
+    MatMenuModule,
   ],
   providers: [CartService,AuthServiceService,ProductsService],
   exports:[],

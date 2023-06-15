@@ -7,13 +7,9 @@
 h1{
   color: rgb(32, 216, 17);
   font-weight: bolder;
- 
-}
-.one{
   font-size: 45px;
-  color: rgb(32, 216, 17);
-
 }
+
 .reviews{
   background-color: #d3d8d7;
   padding: 30px;
@@ -33,7 +29,6 @@ h4{
 .top{
   height: 70vh;
 }
-
 
 .heading{
   margin-top: 30px;
@@ -178,8 +173,41 @@ ul li {
 
 
 
+@media (max-width: 905px) {
+  .images img{
+    margin-top: 40px;
+    height: 370px;
+    margin-right: 20px;
+
+}
+.information{
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 10px;
+}
+.heading{
+  width: 350px;
+  margin: 10px;
+}
+
+h1{
+  
+  font-weight: bold;
+  font-size: 35px;
+}
+.row{
+  margin-left: 20px;
+  margin-right: 20px;
+ 
+}
+mat-card {
+  border-radius: 22px;
+  padding: 10px;
+}
 
 
+
+}
 
 
 

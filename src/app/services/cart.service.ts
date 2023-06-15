@@ -64,7 +64,7 @@ export class CartService {
   increaseQuantity(item: CartItem) {
     let itemss = this.items;
     let index = itemss.indexOf(item);
-    itemss[index].quantity+=1;
+    itemss[index].quantity += 1;
     localStorage.setItem("cartItems", JSON.stringify(itemss));
   }
 
@@ -89,10 +89,10 @@ export class CartService {
 
   removeCartItem(item: any) {
     let itemss = this.items
-    
+
     let index = itemss.indexOf(item)
-    itemss.splice(index,1)
-    
+    itemss.splice(index, 1)
+
     let count = this.cartItemCount.value
     this.cartItemCount.next(count--);
     localStorage.setItem('cartItems', JSON.stringify(itemss));
@@ -100,11 +100,11 @@ export class CartService {
 
   decreaseQuantity(item: CartItem) {
     if (item.quantity > 1) {
-      
-    let itemss = this.items;
-    let index = itemss.indexOf(item);
-    itemss[index].quantity-=1;
-    localStorage.setItem("cartItems", JSON.stringify(itemss));
+
+      let itemss = this.items;
+      let index = itemss.indexOf(item);
+      itemss[index].quantity -= 1;
+      localStorage.setItem("cartItems", JSON.stringify(itemss));
 
       let count = this.cartItemCount.value
       this.cartItemCount.next(count--);
@@ -131,26 +131,22 @@ export class CartService {
           "productId": items[i].product.id,
           "quantity": items[i].quantity
         }
-        )
+      )
     }
 
     let data1 = { products: data }
 
-    console.log("data")
-    console.log(data1)
-    const headers = new HttpHeaders().set('Authorization', 'Bearer ' +  JSON.parse(localStorage.getItem('token')));
-try {
-    const response = await this.http.post(`${this.url}/purchases/create`, data1, { headers}).toPromise();
+    const headers = new HttpHeaders().set('Authorization', 'Bearer ' + JSON.parse(localStorage.getItem('token')));
     
-        // Handle successful response
-        console.log('Purchase created successfully:', response);
-
-        alert('Thank you for your purchase! Our team will get back to you soon!');
-        localStorage.removeItem('cartItems');
-        return 'Purchase created successfully:' + response
-  } catch (error) {
-    return 'Error creating purchase:' + error;
-  }
+    try {
+      const response = await this.http.post(`${this.url}/purchases/create`, data1, { headers }).toPromise();
+      alert('Thank you for your purchase! Our team will get back to you soon!');
+      localStorage.removeItem('cartItems');
+      return 'Purchase created successfully:' + response
+    } catch (error) {
+      
+      return 'Error creating purchase:' + error;
+    }
 
   }
 

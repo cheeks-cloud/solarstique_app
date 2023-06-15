@@ -70,15 +70,14 @@
       <a  routerLink="/carbon"routerLinkActive="active"class="btn btn-custom-purple">Carbon Credits</a>
     </div>
  
-    <div class="dropdown">
-        <button class="btn btn-outline-custom-purple dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ this.username }}
-        </button>
-        <ul class="dropdown-menu" *ngIf="authenticated">
-          <li><button class="dropdown-item" type="button" routerLink="/profile">Profile</button></li>
-          <li><button class="dropdown-item" type="button" (click)="logout()">Logout</button></li>
-        </ul>
-    </div>
+    <button mat-button [matMenuTriggerFor]="menu">
+      {{ username }}
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="'/customers/' + username">Profile</button>
+      <button mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+    
 
 
 
