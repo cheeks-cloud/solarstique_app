@@ -1,24 +1,79 @@
-
 <div class="content">
-  <h1 style="font-family: 'Yeseva One', cursive;">Welcome to the Carbon Credits Market</h1>
-  <p>Buy or sell carbon credits on our platform and help reduce your carbon footprint.</p>
+
+    <h1 style="font-family: 'Yeseva One', cursive;">Welcome to the Carbon Credits Market</h1>
 </div>
 
-<h1>Buy Carbon Credits</h1>
+<div class="modal-content">
+  
+    <mat-card>
+      <mat-card-content>
+        <form>
+        <mat-form-field>
+          <input matInput placeholder="Quantity">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Price">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Payment Method">
+        </mat-form-field>
+        <mat-form-field>
+          <textarea matInput placeholder="Additional Information"></textarea>
+        </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Close</button>
+        <button mat-button color="primary">Buy</button>
+        <button mat-button color="accent">Sell</button>
+      </mat-card-actions>
+    </mat-card>
+</div>
 
-<!-- <form (ngSubmit)="buyCredits()">
-  <label for="amount">Amount:</label>
-  <input type="number" name="amount" [(ngModel)]="amount" required>
-
-  <button type="submit">Buy</button>
-</form> -->
 
 
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Buy/Sell Carbon Credits</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="carbon-form">
+      <mat-form-field class="carbon-field">
+        <mat-label>Credit Type</mat-label>
+        <mat-select placeholder="Select Type" name="creditType">
+          <mat-option value="type1">Type 1</mat-option>
+          <mat-option value="type2">Type 2</mat-option>
+          <mat-option value="type3">Type 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field class="carbon-field">
+        <input matInput type="number" placeholder="Quantity" name="quantity">
+      </mat-form-field>
+      
+      <mat-form-field class="carbon-field">
+        <mat-label>Payment Method</mat-label>
+        <mat-radio-group name="paymentMethod">
+          <mat-radio-button value="creditCard">Credit Card</mat-radio-button>
+          <mat-radio-button value="paypal">PayPal</mat-radio-button>
+        </mat-radio-group>
+      </mat-form-field>
+      
+      <mat-form-field class="carbon-field">
+        <input matInput type="date" placeholder="Transaction Date" name="transactionDate">
+      </mat-form-field>
+      
+      <mat-checkbox class="carbon-field" name="terms">
+        I agree to the terms and conditions
+      </mat-checkbox>
+      
+      <div class="text-center">
+        <button mat-raised-button color="primary">Submit</button>
+        <button mat-raised-button color="accent">Clear</button>
+        <button mat-raised-button color="warn">Cancel</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
 
-<h1>Sell Carbon Credits</h1>
-<!-- <form (ngSubmit)="sellCredits()">
-  <label for="amount">Amount:</label>
-  <input type="number" name="amount" [(ngModel)]="amount" required>
 
-  <button type="submit">Sell</button>
-</form> -->

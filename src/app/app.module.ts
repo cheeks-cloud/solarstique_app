@@ -10,6 +10,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+
 import { MatButtonModule } from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle'
 import { MatIconModule } from '@angular/material/icon';
@@ -73,6 +76,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatInputModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
+    MatSelectModule,
+    MatInputModule,
   ],
   providers: [CartService,AuthServiceService,ProductsService],
   exports:[],
