@@ -74,5 +74,20 @@
       flex-direction: column;
       flex-wrap: wrap;
     }
+    .footer-container{
+      padding: 20px;
+    }
+    .one{
+      margin-left:10px;
+    }
   }
+
+  @media (max-width: 600px) {
+
+
+
+
+
+  }
+
   
