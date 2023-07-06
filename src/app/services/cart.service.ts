@@ -140,8 +140,11 @@ export class CartService {
     
     try {
       const response = await this.http.post(`${this.url}/purchases/create`, data1, { headers }).toPromise();
-      alert('Thank you for your purchase! Our team will get back to you soon!');
       localStorage.removeItem('cartItems');
+
+     this.items=[]
+
+      alert('Thank you for your purchase! Our team will get back to you soon!');
       return 'Purchase created successfully:' + response
     } catch (error) {
       

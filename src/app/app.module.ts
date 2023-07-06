@@ -40,7 +40,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatMenuModule } from '@angular/material/menu';
-
+import { ProfileServiceService } from './services/profile-service.service';
+import { BuyService } from './services/buy.service';
 
 
 @NgModule({
@@ -56,8 +57,8 @@ import { MatMenuModule } from '@angular/material/menu';
     CarbonComponent,
     CartComponent,
     LoginComponent,
-    MarketComponent,
     SignupComponent,
+    MarketComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,7 +85,10 @@ import { MatMenuModule } from '@angular/material/menu';
     MatRadioModule ,
     MatMenuModule,
   ],
-  providers: [CartService,AuthServiceService,ProductsService],
+  providers: [CartService,AuthServiceService,
+    ProductsService, ProfileServiceService,
+    BuyService,
+  ],
   exports:[],
   bootstrap: [AppComponent],
 

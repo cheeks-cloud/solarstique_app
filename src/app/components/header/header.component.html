@@ -74,7 +74,8 @@
       {{ username }}
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item [routerLink]="'/customers/' + username">Profile</button>
+
+      <button mat-menu-item routerLink="/sell">Profile</button>
       <button mat-menu-item (click)="logout()">Logout</button>
     </mat-menu>
     
