@@ -211,6 +211,9 @@ mat-card {
   border-radius: 22px;
   padding: 10px;
 }
+.info p{
+  margin-top: 40px;
+}
 
 
 
