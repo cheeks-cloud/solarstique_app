@@ -22,7 +22,7 @@ export interface CartItem {
 })
 
 export class CartService {
-  url = "http://localhost:8000"
+  url = "https://solarstiquesuzushi7.onrender.com"
   headers = new HttpHeaders(
     {
       'Content-Type': 'application/json',

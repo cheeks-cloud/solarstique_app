@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 
 export class BuyService {
-  url = "http://localhost:8000"
+  url = "https://solarstiquesuzushi7.onrender.com"
   headers = new HttpHeaders(
     {
       'Content-Type': 'application/json',

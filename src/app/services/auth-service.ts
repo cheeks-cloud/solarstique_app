@@ -6,7 +6,7 @@ import { BehaviorSubject, map, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthServiceService {
-  url = "http://127.0.0.1:8000"
+  url = "https://solarstiquesuzushi7.onrender.com"
   headers = new HttpHeaders(
     {
       'Content-Type': 'application/json',

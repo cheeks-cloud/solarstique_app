@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProfileServiceService {
-  url = "http://localhost:8000"
+  url = "https://solarstiquesuzushi7.onrender.com"
   headers = new HttpHeaders(
     {
       'Content-Type': 'application/json',
