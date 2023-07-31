@@ -29,6 +29,9 @@ h4{
 .top{
   height: 70vh;
 }
+.process img{
+  margin-left: 70px;
+}
 
 .heading{
   margin-top: 30px;
@@ -61,6 +64,9 @@ h4{
   margin-left: 40px;
   text-align: center;
   margin-top: 30px;
+}
+.info p{
+  text-align: center;
 }
 .row{
   margin-top: 30px;
