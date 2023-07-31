@@ -7,7 +7,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductsService {
-    // url = "http://localhost:8000"
    url= "https://solarstiquesuzushi7.onrender.com"
     headers = new HttpHeaders(
       {
@@ -24,7 +23,7 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   getProducts():Observable<any>{
-    return this.http.get(`${this.url}/products`)
+    return this.http.get(`${this.url}/products/`)
   }
 
 
